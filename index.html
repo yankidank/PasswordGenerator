@@ -21,7 +21,32 @@
 			<div class="main_content">
 				<h2>Generate a Password</h2>
 				<div class="password_wrapper">
-					<p>Options: Length (8-128), Numerical, Capitalizations</p>
+					<p>Password Length: <span id="passLength"></span></p>					
+					<div class="slidecontainer">
+						<input type="range" min="8" max="128" value="15" class="slider" id="passRange">
+					</div>
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<input type="checkbox" id="numerical" name="numerical" checked onclick="passNumerical();"/>
+									Numbers 0-9
+								</td>
+								<td>
+									<input type="checkbox" id="lowercase" name="lowercase" checked onclick="passLowercase();"/>
+									Lowercase letters
+								</td>
+								<td>
+									<input type="checkbox" id="capital" name="capital" checked onclick="passCapital();"/>
+									Capital letters
+								</td>
+								<td>
+									<input type="checkbox" id="special" name="special" onclick="passSpecial();"/>
+									Special characters
+								</td>
+							</tr>
+						</tbody>
+					</table>
 					<input type="text" class="password_field" id="passField" onClick="this.setSelectionRange(0, this.value.length)" value="Your Secure Password" />
 					<div class="buttons_wrapper">
 						<input type="button" class="button button_generate" id="passGenerate" onclick="passGenerate()" value="Generate Password">
