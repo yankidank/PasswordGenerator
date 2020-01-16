@@ -1,0 +1,71 @@
+:root {
+	font-size: 62.5%; /* 16px font size rem conversion*/
+}
+body {
+	margin:0;
+	padding:0;
+	text-align:center;
+	color:#3b4954;
+	background:#f9fbfd;
+	font-size: 1.6rem; /* 16px font size rem conversion*/
+	font-family: Arial, Helvetica, sans-serif;
+}
+.clear {
+	clear:both;
+}
+.nav_wrapper, .main_wrapper {
+	display:inline-block;
+	width:720px;
+	margin:0 auto;
+}
+.nav_content h1 {
+	text-align:center;
+	font-size:2.6rem;
+	margin:20px 0 40px 0;
+}
+.main_wrapper {
+	background:#fff;
+	-webkit-box-shadow: 0px 2px 2px 0px rgba(199,199,199,0.6);
+	-moz-box-shadow: 0px 2px 2px 0px rgba(199,199,199,0.6);
+	box-shadow: 0px 2px 2px 0px rgba(199,199,199,0.6);
+}
+.main_content {
+	text-align:left;
+	margin:30px;
+}
+.main_content h2 {
+	font-size:2.2rem;
+	padding:10px 0 15px 0;
+	border-bottom:1px solid #ddd;
+	width:100%;
+}
+.password_field {
+	text-align:center;
+	width:100%;
+	height:100px;
+	margin-bottom:10px;
+	color:#757575;
+	border:1px dashed rgb(177, 177, 177);
+	border-radius:5px;
+}
+.buttons_wrapper {
+	border-top:1px solid #ddd;
+	padding-top:15px;
+}
+.button {
+	border-radius: 25px;
+	padding:12px 25px;
+	color:#fff;
+	border: 0;
+}
+.button:hover {
+	cursor:pointer;
+}
+.button_generate {
+	background:#af0808;
+}
+.button_copy {
+	float:right;
+	text-align:right;
+	background:#c0c7cf;
+}
