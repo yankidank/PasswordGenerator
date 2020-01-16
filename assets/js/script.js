@@ -1,15 +1,20 @@
 // Password length slider
-var sliderValue = 15;
+var sliderValue = 15
 var slider = document.getElementById("passRange")
 var output = document.getElementById("passLength")
 output.innerHTML = slider.value; // Display the default slider value
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
   output.innerHTML = this.value
+  sliderValue = this.value
 }
 
-// Numerical checkbox
-var numericalCheck = true // checked by default
+// Checkbox default states
+var numericalCheck = true
+var lowercaseCheck = true
+var capitalCheck = true
+var specialCheck = false
+
 function passNumerical() {
   if (document.getElementById('numerical').checked) {
     numericalCheck = true
@@ -20,8 +25,6 @@ function passNumerical() {
   // console.log('Numbers:' + numericalCheck)
 }
 
-// Lowercase checkbox
-var lowercaseCheck = true // checked by default
 function passLowercase() {
   if (document.getElementById('lowercase').checked) {
     lowercaseCheck = true
@@ -31,8 +34,6 @@ function passLowercase() {
   // console.log('Lowercase:' + lowercaseCheck)
 }
 
-// Capital checkbox
-var capitalCheck = true // checked by default
 function passCapital() {
   if (document.getElementById('capital').checked) {
     capitalCheck = true
@@ -42,8 +43,6 @@ function passCapital() {
   // console.log('Capitals:' + capitalCheck)
 }
 
-// Special characters checkbox
-var specialCheck = false
 function passSpecial() {
   if (document.getElementById('special').checked) {
     specialCheck = true
@@ -82,7 +81,7 @@ function passCompute (length){
 
 function passGenerate (){
   var text = document.getElementById('passField')
-  text.value = passCompute(15)
+  text.value = passCompute(sliderValue)
 }
 
 function passCopy (){
