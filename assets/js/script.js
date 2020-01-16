@@ -75,7 +75,11 @@ function passCompute (length){
   for ( var i = 0; i < length; i++ ) {
      result += characters.charAt(Math.floor(Math.random() * charactersLength))
   }
-  return result
+  if (numericalCheck === false && lowercaseCheck === false && capitalCheck === false && specialCheck === false){
+    return '[ERROR] No character type has been selected'
+  } else {
+    return result
+  }
 }
 //console.log(passCompute(5));
 
