@@ -15,8 +15,15 @@ body {
 }
 .nav_wrapper, .main_wrapper {
 	display:inline-block;
-	width:720px;
+	width:100%;
 	margin:0 auto;
+	min-width:480px;
+	max-width:960px;
+}
+@media only screen and (min-width: 960px)  {
+	.nav_wrapper, .main_wrapper {
+		width:960px;
+	}
 }
 .nav_content h1 {
 	text-align:center;
