@@ -50,7 +50,7 @@
 							</div>
 						</div>
 					</div>
-					<input type="text" class="password_field" id="passField" onClick="this.setSelectionRange(0, this.value.length)" value="Your Secure Password" />
+					<input type="text" class="password_field" id="passField" onClick="this.setSelectionRange(0, this.value.length)" placeholder="Your Secure Password" onkeydown="return false;" value="" />
 					<div class="buttons_wrapper">
 						<input type="button" class="button button_generate" id="passGenerate" onclick="passGenerate()" value="Generate Password">
 						<input type="button" class="button button_copy" id="passCopy" onclick="passCopy()" value="Copy to Clipboard">.
